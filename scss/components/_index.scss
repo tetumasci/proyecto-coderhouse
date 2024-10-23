@@ -45,12 +45,24 @@ main{
         color: white;
     }
     a{
-        background-color: $color-principal;
-        color: $color-secundario;
-        padding: 8px;
-        border: 3px solid;
+        @include contacto(2px solid $color-secundario,8px,$color-principal,$color-secundario);
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 20px;
+        text-align: center;
         font-size: 20px;
+        padding: 8px;
+        width: 150px;
+        height: 50px;
+        letter-spacing: 1px;
+        transition:background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+        &:hover{
+            background-color: #763c00;
+            color: #f9f7dc;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+}
 }
 
 .servicios{
@@ -89,16 +101,14 @@ main{
                 color: $color-secundario;
                 }
             a{
-                background-color: $color-principal;
-                border-radius: 8px;
-                color: $color-secundario;
-                padding: 5px;
-                border: 2px solid;
-                font-size: 16px;
-                z-index: 0;
-                display: inline-block;
-                text-decoration: none;
-                margin-top: 10px;
+                @extend %info;
+                transition:background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+                &:hover{
+                    background-color: #763c00;
+                    color: #f9f7dc;
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                }
             }
             }
         }
@@ -164,19 +174,27 @@ main{
             color: #763c00;
         }
         a{
+            @include contacto(2px solid $color-secundario,8px,$color-principal,$color-secundario);
             display: inline-block;
             text-decoration: none;
             padding: 10px 20px;
             text-align: center;
-            background-color: #f9f7dc;
             font-size: 20px;
-            color: #763c00;
             padding: 8px;
-            border: 2px solid #763c00;
-            border-radius: 8px;
+            width: 150px;
+            height: 50px;
+            letter-spacing: 1px;
+            transition:background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+            &:hover{
+                background-color: #763c00;
+                color: #f9f7dc;
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
         }
     }
 }
+
 
 footer{
     background-color: $color-principal;

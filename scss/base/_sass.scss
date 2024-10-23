@@ -1,3 +1,44 @@
 $color-principal:#f9f7dc;
 $color-secundario:#763c00;
 $color-terciario:#ef8535;
+
+
+%info{
+    background-color: $color-principal;
+    border-radius: 8px;
+    color: $color-secundario;
+    padding: 5px;
+    border: 2px solid;
+    font-size: 16px;
+    z-index: 0;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+@mixin contacto($border,$b-radio,$bg-color,$color){
+    border:$border ;
+    border-radius: $b-radio;
+    background-color:$bg-color ;
+    color: $color;
+
+}
+
+%h1-pages{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: #763c00;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    text-decoration:underline;
+}
+
+%h2-pages{
+    font-size: 32px;
+    color: #763c00;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+

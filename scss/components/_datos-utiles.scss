@@ -1,0 +1,20 @@
+.main-datos{
+    background-color: #f7f7f7;
+    padding: 20px;
+    .datos-h1{
+        @extend %h1-pages;
+    }
+    .datos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+        a{
+            text-decoration: none;
+            color: #763c00;
+        }
+    }
+}

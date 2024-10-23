@@ -1,0 +1,52 @@
+.nosotros-page{
+    h1{
+        @extend %h1-pages;
+    }
+}
+
+.nosotros-page{
+    .nosotros-historia{
+        h2{
+            @extend %h2-pages;
+        }
+        p{
+            font-size: 18px;
+            color: #333;
+            margin: 0 auto 40px;
+            padding: 1.5em 2em;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #f7f7f7;
+        }
+    }
+    .nosotros-clientes{
+        h2{
+            @extend %h2-pages;
+            padding: 5px;
+        }
+        p{
+            font-size: 16px;
+            border-bottom: 3px solid #ef8535;
+            margin-bottom: 10px;
+            color: #333;
+            padding: 5px;
+            width: fit-content;
+            border-radius: 8px;
+            margin: 0 auto 10px;
+        }
+        .grid-clientes{
+            ul{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 10px;
+                list-style-position: inside;
+                text-align: center;
+                li{
+                    word-wrap: break-word;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
