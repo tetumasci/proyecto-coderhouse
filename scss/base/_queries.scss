@@ -85,6 +85,16 @@
             font-size: large;
         }
     }
+    .inicio{
+        p{
+            width: auto;
+            font-size: 14px;
+        }
+        h1{
+            font-size: 30px;
+            padding: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 607px) {
@@ -127,7 +137,8 @@
 
     .inicio {
         h1 {
-            font-size: 2em;
+            font-size: 30px;
+            padding: 10px;
         }
 
         p {
@@ -292,6 +303,43 @@
         .nosotros-historia{
             p{
                 font-size: 14px;  
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .nosotros-page{
+        .nosotros-clientes{
+            .card-clientes{
+                flex-direction: column;
+                height: auto;
+                padding: 5px;
+                p{
+                    flex: none;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    
+                }
+                span{
+                    transform: rotate(0)!important;
+                    padding: 0.3em;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .nosotros-page{
+        .nosotros-clientes{
+            .card-clientes{
+                p{
+                    &:hover{
+                        flex: 8;
+                    }
+                }
             }
         }
     }

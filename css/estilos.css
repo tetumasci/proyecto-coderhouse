@@ -58,7 +58,7 @@ main {
 
 .inicio {
   height: 60vh;
-  background-image: url("../img/escritorio-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445)), url("../img/escritorio-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,7 +70,9 @@ main {
   align-items: center; }
   .inicio p {
     margin-bottom: 30px;
-    color: white; }
+    color: white;
+    padding: 20px;
+    width: 700px; }
   .inicio a {
     border: 2px solid #763c00;
     border-radius: 8px;
@@ -261,15 +263,40 @@ footer {
   border-radius: 8px;
   margin: 0 auto 10px; }
 
-.nosotros-page .nosotros-clientes .grid-clientes ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  list-style-position: inside;
-  text-align: center; }
-  .nosotros-page .nosotros-clientes .grid-clientes ul li {
-    word-wrap: break-word;
-    padding: 10px 0; }
+.nosotros-page .nosotros-clientes .card-clientes {
+  width: 100%;
+  height: 254px;
+  border-radius: 4px;
+  display: flex;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 20px; }
+  .nosotros-page .nosotros-clientes .card-clientes p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.8s;
+    background: #f9f7dc;
+    border: 1px solid #ef8535;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nosotros-page .nosotros-clientes .card-clientes p:hover {
+      flex: 4; }
+    .nosotros-page .nosotros-clientes .card-clientes p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
+      transform: rotate(-90deg);
+      transition: all 0.8s;
+      text-transform: uppercase;
+      color: #763c00;
+      font-weight: bold;
+      letter-spacing: .1em; }
+    .nosotros-page .nosotros-clientes .card-clientes p:hover span {
+      transform: rotate(0); }
 
 .servicios-page {
   padding: 20px;
@@ -406,7 +433,13 @@ footer {
 
 @media screen and (max-width: 720px) {
   footer h4 {
-    font-size: large; } }
+    font-size: large; }
+  .inicio p {
+    width: auto;
+    font-size: 14px; }
+  .inicio h1 {
+    font-size: 30px;
+    padding: 10px; } }
 
 @media screen and (max-width: 607px) {
   footer .footer-grid {
@@ -431,7 +464,8 @@ footer {
     grid-template-columns: 1fr;
     gap: 20px; }
   .inicio h1 {
-    font-size: 2em; }
+    font-size: 30px;
+    padding: 10px; }
   .inicio p {
     font-size: 14px; } }
 
@@ -514,3 +548,21 @@ footer {
 @media screen and (max-width: 950px) {
   .nosotros-page .nosotros-historia p {
     font-size: 14px; } }
+
+@media (max-width: 650px) {
+  .nosotros-page .nosotros-clientes .card-clientes {
+    flex-direction: column;
+    height: auto;
+    padding: 5px; }
+    .nosotros-page .nosotros-clientes .card-clientes p {
+      flex: none;
+      width: 100%;
+      margin-bottom: 5px; }
+    .nosotros-page .nosotros-clientes .card-clientes span {
+      transform: rotate(0) !important;
+      padding: 0.3em;
+      font-size: 0.9em; } }
+
+@media (max-width: 900px) {
+  .nosotros-page .nosotros-clientes .card-clientes p:hover {
+    flex: 8; } }

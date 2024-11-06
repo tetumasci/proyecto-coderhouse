@@ -30,7 +30,7 @@ main{
 
 .inicio{
     height: 60vh;
-    background-image: url("../img/escritorio-1.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.445),rgba(0, 0, 0, 0.445)), url("../img/escritorio-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,6 +43,8 @@ main{
     p{
         margin-bottom: 30px;
         color: white;
+        padding: 20px;
+        width: 700px;
     }
     a{
         @include contacto(2px solid $color-secundario,8px,$color-principal,$color-secundario);
