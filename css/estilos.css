@@ -530,6 +530,10 @@ footer {
     .contact-container .contact-info .info p {
       font-size: 14px; } }
 
+@media screen and (max-width: 420px) {
+  .contact-h1 {
+    font-size: 38px; } }
+
 @media screen and (max-width: 980px) {
   .nosotros-page .nosotros-clientes .grid-clientes ul {
     grid-template-columns: repeat(2, 1fr);
